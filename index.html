@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registro de envíos · Oficina ZEK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<div class="hoja">
+  <header class="cabecera">
+    <div>
+      <a class="volver" href="/">← Volver a la oficina</a>
+      <h1>Registro de envíos</h1>
+      <p class="bajada" id="bajada">Cargando…</p>
+    </div>
+    <div class="estado-conexion" id="conexion"><span class="punto"></span><span>conectando…</span></div>
+  </header>
+
+  <section class="embudo" id="embudo" aria-label="Embudo: tocá un tramo para filtrar"></section>
+
+  <div class="herramientas">
+    <nav class="filtros" id="filtros" aria-label="Filtrar"></nav>
+    <input class="buscar" id="buscar" type="search" placeholder="Buscar negocio, @usuario o rubro" aria-label="Buscar">
+  </div>
+
+  <div class="tabla" role="table" aria-label="Negocios">
+    <div class="fila cab" role="row">
+      <span role="columnheader">Negocio</span>
+      <span role="columnheader">Qué le mandaste</span>
+      <span role="columnheader">Qué te dijo</span>
+      <span role="columnheader">Estado</span>
+      <span role="columnheader">Próximo paso</span>
+    </div>
+    <div id="filas"></div>
+  </div>
+</div>
+<div class="aviso" id="aviso" role="status"></div>
+<script src="panel.js"></script>
+</body>
+</html>
